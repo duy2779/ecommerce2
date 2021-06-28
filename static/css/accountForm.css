@@ -1,0 +1,28 @@
+.register-container{
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+.account-form{
+    row-gap: 1rem;
+}
+.account-form label{
+    width: 16%;
+    text-align: right;
+}
+.account-form input{
+    border: 1px solid var(--gray-color);
+}
+.account-form .input-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+.account-form .button-wrapper{
+    margin-left: auto;
+}
+.account-form .input-wrapper input{
+    height: 2rem;
+    padding: 0 .5rem;
+    flex-grow: 1;
+}

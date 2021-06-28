@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load custom_tags %}
+
+{% block content %}
+  <div class="register-container container grid">
+    
+    {% if form.errors %}
+        <div class="form-error">
+          <p>{{ form.errors.values|get_first }}</p>
+        </div>
+    {% endif %}
+
+    <form method="POST" action="" class="account-form grid">
+      {% csrf_token %}
+  
+      <div class="input-wrapper">
+        <label for="id_username">Username</label>
+        {{form.username}}
+      </div>
+  
+      <div class="input-wrapper">
+        <label for="id_full_name">Full Name</label>
+        {{form.full_name}}
+      </div>
+
+      <div class="input-wrapper">
+        <label for="id_email">Email</label>
+        {{form.email}}
+      </div>
+  
+      <div class="input-wrapper">
+        <label for="id_password1">Password</label>
+        {{form.password1}}
+      </div>
+  
+      <div class="input-wrapper">
+        <label for="id_password2">Password Confirm</label>
+        {{form.password2}}
+      </div>
+
+      <div class="button-wrapper">
+        <button class="button" type="submit">Continue</button>
+      </div>
+      
+    </form>
+  </div>
+
+{% endblock content %}

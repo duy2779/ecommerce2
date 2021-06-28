@@ -14,6 +14,7 @@ def path_and_rename(instance, filename):
 class User(AbstractUser):
     first_name = None
     last_name = None
+    full_name = models.CharField(max_length=200)
 
     avatar = models.ImageField(
         upload_to=path_and_rename, default="avatar.png")
