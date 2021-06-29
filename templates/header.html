@@ -1,0 +1,93 @@
+<header class="header" id="header">
+  <div class="header-top">
+      <div class="header-top-container container">
+        <a href="#" class="nav-logo">Ecommerce</a>
+
+        <div class="header-search">
+          <input type="text" class="search-input" placeholder="Search..." />
+          <button class="button search-button">
+            <i class="ri-search-line"></i>
+          </button>
+        </div>
+    
+        <div class="header-top-actions">
+            <div class="header-top-action-wrapper">
+                <div class="header-profile" id="header-profile">
+                    <i class="ri-user-fill"></i>
+                    
+                    {% if request.user.is_authenticated %}
+                      <p>Welcome, {{ request.user | title }}</p>
+                      {% else %}
+                      <p>My account</p>
+                    {% endif %}
+
+                    <div class="profile-actions-dropdown" id="profile-actions-dropdown">
+                      <ul class="profile-actions-list">
+                        
+                        {% if request.user.is_authenticated %}
+                          <li class="profile-action">
+                            <a href="#" class="profile-action-link">
+                              <i class="ri-user-line"></i>
+                              <span>Profile</span>
+                            </a>
+                          </li>
+                          <li class="profile-action">
+                            <a href="{% url 'account:logout' %}" class="profile-action-link">
+                              <i class="ri-logout-box-line"></i>
+                              <span>Log out</span>
+                            </a>
+                          </li>
+                          {% else %}
+                          <li class="profile-action">
+                            <a href="{% url 'account:login' %}" class="profile-action-link">
+                              <i class="ri-login-box-line"></i>
+                              <span>Login</span>
+                            </a>
+                          </li>
+
+                          <li class="profile-action">
+                            <a href="{% url 'account:register' %}" class="profile-action-link">
+                              <i class="ri-registered-line"></i>
+                              <span>Sign up</span>
+                            </a>
+                          </li>
+                        {% endif %}
+                          
+
+                      </ul>
+                    </div>
+                      
+                  </div>
+
+                  <div class="header-cart">
+                    <i class="ri-shopping-cart-2-fill"></i>
+                    <p>Cart</p>
+                  </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="nav-menu container">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="" class="nav-link">Phone</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Apple</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Tablet</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Sale</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Like New Devices</a>
+      </li>
+    </ul>
+  </div>
+</header>

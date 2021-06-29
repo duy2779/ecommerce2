@@ -1,0 +1,106 @@
+.header-top{
+    background-color: var(--base-color);
+}
+.header-top-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    column-gap: 8rem;
+}
+
+.header-top-actions{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    width: 25%;
+    position: relative;
+}
+
+.header-top-action-wrapper{
+    display: flex;
+    color: var(--base-color);
+    width: 100%;
+}
+.header-top-action-wrapper p{
+    font-size: var(--smaller-font-size);
+}
+
+.header-top-action-wrapper i{
+    font-size: 1.5rem;
+}
+
+.header-profile,
+.header-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 50%;
+    cursor: pointer;
+}
+.header-profile{
+    border-right: 1px solid var(--base-color);
+}
+.profile-actions-dropdown{
+    display: none;
+    position: absolute;
+    background-color: var(--white-color);
+    top: 100%;
+    left: -2rem;
+    width: 50%;
+    border: 1px solid var(--gray-color);
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.show-profile-actions-dropdown{
+    display: block;
+}
+
+.profile-action-link{
+    padding: .5rem .75rem;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+
+    color: black;
+}
+.profile-action:hover{
+    background-color: var(--gray-color);
+}
+.profile-action i{
+    font-size: 1.25rem;
+}
+
+.header-search{
+    flex-grow: 1;
+    display: flex;
+    column-gap: 0;
+}
+.search-input{
+    padding: .5rem .5rem;
+    width: 100%;
+}
+.search-button{
+    background-color: var(--secondary-color);
+    border-radius: 0;
+    padding: .5rem .75rem;
+}
+
+.nav-logo{
+    font-size: var(--h2-font-size);
+    color: var(--white-color);
+    font-weight: var(--font-semibold);
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.nav-link{
+    color: black;
+    font-weight: var(--font-semibold);
+}

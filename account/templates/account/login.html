@@ -2,9 +2,9 @@
 {% load custom_tags %}
 
 {% block content %}
-  <div class="register-container container grid">
-      <p>username:{{request.user}}</p>
-      
+{% include 'breadcumb.html' %}
+  <div class="register-container container grid section">
+
       {% if messages %}
         {% for message in messages %}
             <div class="form-error">
